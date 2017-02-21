@@ -1,0 +1,37 @@
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+/**
+ * File Entity
+ *
+ * @property int $id
+ * @property string $name
+ * @property string|resource $data
+ * @property int $user_id
+ * @property int $format_id
+ * @property int $folder_id
+ * @property \Cake\I18n\Time $last_change
+ *
+ * @property \App\Model\Entity\User $user
+ * @property \App\Model\Entity\FileFormat $file_format
+ * @property \App\Model\Entity\Folder $folder
+ */
+class File extends Entity
+{
+
+    /**
+     * Fields that can be mass assigned using newEntity() or patchEntity().
+     *
+     * Note that when '*' is set to true, this allows all unspecified fields to
+     * be mass assigned. For security purposes, it is advised to set '*' to false
+     * (or remove it), and explicitly make individual fields accessible as needed.
+     *
+     * @var array
+     */
+    protected $_accessible = [
+        '*' => true,
+        'id' => false
+    ];
+}
